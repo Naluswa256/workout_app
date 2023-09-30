@@ -3,19 +3,18 @@ import 'package:workout_app/style/styling.dart';
 
 class Button extends StatelessWidget {
   final String btnTxt;
-  final Function onTap;
+  final void Function()? onTap;
   final bool border;
   final Color borderColor;
   final bool roundedBorder;
 
   const Button(
-      {Key key,
+      {
       this.roundedBorder = false,
-      this.btnTxt,
-      this.onTap,
+      required this.btnTxt,
+      required this.onTap,
       this.border = false,
-      this.borderColor})
-      : super(key: key);
+      required this.borderColor});
 
   @override
   Widget build(BuildContext context) {

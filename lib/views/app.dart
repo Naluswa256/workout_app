@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:workout_app/style/styling.dart';
-import 'package:workout_app/views/home.dart';
+import 'package:workout_app/src/features/authentication/presentation/screens/home.dart';
 import 'package:workout_app/views/workout.dart';
 
 class Application extends StatefulWidget {
+  final String uid;
+  Application({required this.uid});
   @override
   _ApplicationState createState() => _ApplicationState();
 }
@@ -36,7 +38,7 @@ class _ApplicationState extends State<Application> {
           setState(() => selected = index);
         },
         children: [
-          Home(),
+          Home(uid: widget.uid,),
           Workout(),
           const Center(
               child: Icon(Icons.grade, size: 64.0, color: Colors.blue)),
@@ -72,7 +74,7 @@ class _ApplicationState extends State<Application> {
     );
   }
 
-  GestureDetector bottomBarIcon({String asset, int index}) {
+  GestureDetector bottomBarIcon({required String asset, required int index}) {
     return GestureDetector(
         onTap: () {
           setState(() {
@@ -85,7 +87,7 @@ class _ApplicationState extends State<Application> {
             color: selected == index ? AppColor.pColor : Colors.grey));
   }
 
-  GestureDetector bottomBarItems({int index, String title}) {
+  GestureDetector bottomBarItems({required int index, required String title}) {
     return GestureDetector(
         onTap: () {
           setState(() {

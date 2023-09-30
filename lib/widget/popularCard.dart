@@ -4,7 +4,7 @@ import 'package:workout_app/style/styling.dart';
 class PopularCard extends StatelessWidget {
   final String asset;
   final String title;
-  const PopularCard({Key key, this.asset, this.title}) : super(key: key);
+  const PopularCard({ required this.asset, required this.title});
 
   @override
   Widget build(BuildContext context) {

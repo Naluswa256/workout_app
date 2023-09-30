@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:workout_app/style/styling.dart';
 import 'package:workout_app/style/text.dart';
-import 'package:workout_app/views/app.dart';
+import 'package:workout_app/views/weight_screen.dart';
 import 'package:workout_app/widget/aboutCard.dart';
 import 'package:workout_app/widget/about_button.dart';
 import 'package:workout_app/widget/bodyText.dart';
 import 'package:workout_app/widget/header.dart';
+import 'package:go_router/go_router.dart';
+import '../src/features/authentication/domain/usecases/update_userprofile_usecase.dart';
 
-class About extends StatelessWidget {
+class About extends StatefulWidget {
+
+  final String uid;
+  About({required this.uid});
+  @override
+  State<About> createState() => _AboutState();
+}
+
+class _AboutState extends State<About> {
+  final userProfileUseCases = UserProfileUseCases();
+  int selectedCardIndex = -1;
+  String selectedCardValue = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +28,7 @@ class About extends StatelessWidget {
       children: [
         SizedBox.expand(
             child: Image.asset(
-          'assets/images/about.png',
+         'assets/images/about.png',
           fit: BoxFit.fill,
         )),
         Container(color: AppColor.sColor.withOpacity(0.8)),
@@ -32,7 +45,7 @@ class About extends StatelessWidget {
                     children: [
                       Expanded(
                           flex: 6, child: BodyText(bodyTxt: abt, desc: abody)),
-                      SizedBox(height: 25),
+                      SizedBox(height: 15),
                       Expanded(
                           flex: 9,
                           child: SingleChildScrollView(
@@ -43,13 +56,37 @@ class About extends StatelessWidget {
                                 AboutCard(
                                   txt: abody2,
                                   descText: abody2i,
-                                  isSelected: true,
+                                  isSelected: selectedCardIndex == 0,
+                                  onSelectionChanged: (selected) {
+                                    setState(() {
+                                      selectedCardIndex = selected ? 0 : -1;
+                                      selectedCardValue = selected ? 'Beginner': '';
+                                    });
+                                  },
                                 ),
                                 SizedBox(width: 20),
                                 AboutCard(
                                   txt: abody3,
                                   descText: abody3i,
-                                  isSelected: false,
+                                  isSelected: selectedCardIndex == 1,
+                                  onSelectionChanged: (selected) {
+                                    setState(() {
+                                      selectedCardIndex = selected ? 1 : -1;
+                                      selectedCardValue = selected? 'Intermediate': '';
+                                    });
+                                  },
+                                ),
+                                SizedBox(width: 20),
+                                AboutCard(
+                                  txt: abody6,
+                                  descText: abody6i,
+                                  isSelected: selectedCardIndex == 2,
+                                  onSelectionChanged: (selected) {
+                                    setState(() {
+                                      selectedCardIndex = selected ? 2 : -1;
+                                      selectedCardValue = selected ? 'Pro' : '';
+                                    });
+                                  },
                                 ),
                               ],
                             ),
@@ -62,15 +99,23 @@ class About extends StatelessWidget {
                               children: [
                                 AboutButton(
                                   text: abody4,
-                                  onPress: () => Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Application())),
+                                  onPress: () => context.go('/'),
                                 ),
                                 AboutButton(
                                     isColoredButton: true,
                                     text: abody5,
-                                    onPress: null)
+                                    onPress: ()async{
+                                      final updatedFields = {
+                                        'userFitnessLevel': selectedCardValue, // Replace with your updated fields
+                                      };
+
+                                      // Call the use case to update and navigate
+                                      await userProfileUseCases.updateAndNavigateToScreen(
+                                        context: context,
+                                        uid: widget.uid,
+                                        updatedFields: updatedFields, routePath: '/weight/${widget.uid}',
+                                      );
+                                    })
                               ],
                             ),
                           ))

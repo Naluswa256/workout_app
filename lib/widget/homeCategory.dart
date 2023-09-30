@@ -3,26 +3,29 @@ import 'package:workout_app/style/styling.dart';
 
 class HomeCategory extends StatelessWidget {
   final String categoryName;
-  final bool isSelected;
-  const HomeCategory({Key key, this.categoryName, this.isSelected = false})
-      : super(key: key);
+  const HomeCategory({ required this.categoryName,});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: isSelected ? 28 : null,
-      width: isSelected ? 92 : null,
-      decoration: isSelected
-          ? BoxDecoration(
-              borderRadius: BorderRadius.circular(PadRadius.radius),
-              border: Border.all(color: AppColor.pColor))
-          : null,
-      child: Center(
-        child: Text(
-          categoryName,
-          style: AppTextStyle.body12,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          height: 50,
+          width: 50,
+          decoration:BoxDecoration(
+                  borderRadius: BorderRadius.circular(PadRadius.radius),
+                  border: Border.all(color: AppColor.pColor)),
+          child: Icon(Icons.verified_user_outlined, size:24)
         ),
-      ),
+        const SizedBox(height:2),
+        Center(
+          child: Text(
+            categoryName,
+            style: AppTextStyle.body12,
+          ),
+        ),
+      ],
     );
   }
 }

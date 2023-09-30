@@ -3,11 +3,11 @@ import 'package:workout_app/style/styling.dart';
 
 class AboutButton extends StatelessWidget {
   final String text;
-  final Function onPress;
+  final  void Function()? onPress;
   final bool isColoredButton;
-  const AboutButton(
-      {Key key, this.isColoredButton = false, this.onPress, this.text})
-      : super(key: key);
+   AboutButton(
+      { this.isColoredButton = false, this.onPress, required this.text});
+
 
   @override
   Widget build(BuildContext context) {

@@ -3,9 +3,7 @@ import 'package:workout_app/style/styling.dart';
 import 'package:workout_app/style/text.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    Key key,
-  }) : super(key: key);
+  const Header();
 
   @override
   Widget build(BuildContext context) {

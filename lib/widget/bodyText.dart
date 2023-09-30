@@ -7,11 +7,11 @@ class BodyText extends StatelessWidget {
   final bool isBold;
 
   const BodyText(
-      {Key key,
+      {
       this.isBold = false,
-      @required this.bodyTxt,
-      @required this.desc})
-      : super(key: key);
+      required this.bodyTxt,
+      required this.desc});
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,6 @@ class BodyText extends StatelessWidget {
                 ? AppTextStyle.headline50
                 : TextStyle(fontSize: 43, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 8),
           Text(
             desc,
             style: TextStyle(fontFamily: 'Euclid', fontSize: 15),

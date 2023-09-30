@@ -170,7 +170,7 @@ class Workout extends StatelessWidget {
                     children: [
                       Button(
                         border: false,
-                        btnTxt: dbutn1,
+                        btnTxt: dbutn1, onTap: () {  }, borderColor: Colors.white,
                       ),
                       SizedBox(
                         height: 20,
@@ -178,7 +178,8 @@ class Workout extends StatelessWidget {
                       Button(
                         border: true,
                         btnTxt: dbutn2,
-                        borderColor: AppColor.pColor,
+                        borderColor: AppColor.pColor, onTap: () {  },
+
                       ),
                     ],
                   )),
@@ -193,7 +194,7 @@ class Workout extends StatelessWidget {
 class RichTextWidget extends StatelessWidget {
   final String number;
   final String text;
-  const RichTextWidget({Key key, this.number, this.text}) : super(key: key);
+  const RichTextWidget({ required this.number, required this.text});
 
   @override
   Widget build(BuildContext context) {
