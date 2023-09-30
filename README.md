@@ -6,7 +6,7 @@
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604"  src="./screeshots/image (1).jpg">  Screen 1 |  <img width="1604" src="./screenshots/image (2).jpg"> Screen 2 |<img width="1604" src="./screenshots/image (3).jpg"> Screen 3 |
+|<img width="1604"  src="./screenshots/image (1).jpg">  Screen 1 |  <img width="1604" src="./screenshots/image (2).jpg"> Screen 2 |<img width="1604" src="./screenshots/image (3).jpg"> Screen 3 |
 |<img width="1604" src="./screenshots/image (4).jpg">Screen 4 |  <img width="1604" src="./screenshots/image (5).jpg">  Screen 5|<img width="1604" src="./screenshots/image (6).jpg"> Screen 6|
 |<img width="1604" src="./screenshots/image (7).jpg">Screen 7 |  <img width="1604" src="./screenshots/image (8).jpg">  Screen 8|
 
