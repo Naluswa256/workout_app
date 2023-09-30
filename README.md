@@ -9,7 +9,7 @@ This project is a collaborative effort aimed at enhancing the user interface (UI
 
 ### Key Contributions:
 
-- **UI Enhancements:**focused on refining the visual aesthetics, ensuring a cleaner and more user-friendly interface. This involved revamping existing components and introducing design elements for a polished appearance.
+- **UI Enhancements:** focused on refining the visual aesthetics, ensuring a cleaner and more user-friendly interface. This involved revamping existing components and introducing design elements for a polished appearance.
 
 - **Bug Fixes:** Dedicated efforts to identify and rectify bugs present in the original codebase. This includes addressing issues related to functionality, responsiveness, and overall system stability.
 
