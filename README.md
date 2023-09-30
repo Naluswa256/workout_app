@@ -2,7 +2,24 @@
 <div align="center">
   <h1>An Exercise App With bloc State management and Firebase </h1>
 </div>
-![](./screenshots/screenshot.gif)
+
+## Project Description
+
+This project is a collaborative effort aimed at enhancing the user interface (UI) of a pre-existing repository[repository](https://github.com/iamuzi/WorkoutApp) . Leveraging the existing codebase, Have worked diligently to address UI-related issues, fix bugs, and introduce new screens to elevate the overall user experience and also add State management With Bloc.
+
+### Key Contributions:
+
+- **UI Enhancements:**focused on refining the visual aesthetics, ensuring a cleaner and more user-friendly interface. This involved revamping existing components and introducing design elements for a polished appearance.
+
+- **Bug Fixes:** Dedicated efforts to identify and rectify bugs present in the original codebase. This includes addressing issues related to functionality, responsiveness, and overall system stability.
+
+- **New Screens:** Building upon the foundation laid by the original repository,  introduced new screens to expand the app's functionality. These screens are thoughtfully designed to seamlessly integrate with the existing structure.
+
+- **Bloc State Management**: Introduced Bloc state management to streamline application state and improve code organization.
+
+- **Collaboration with Existing Codebase**: Demonstrated proficiency in working with an existing codebase, showcasing the ability to seamlessly integrate new features and improvements.
+
+
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
@@ -13,7 +30,7 @@
 |
 
 <h2>Overview</h2>
-
+<p>The project is structured using Clean Architecture principles, which divide the codebase into several layers:</p>
 <p>The project is structured using Clean Architecture principles, which divide the codebase into several layers:</p>
 
 <ul>
