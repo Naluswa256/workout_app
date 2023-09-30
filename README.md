@@ -5,7 +5,7 @@
 
 ## Project Description
 
-This project is a collaborative effort aimed at enhancing the user interface (UI) of a pre-existing repository[repository](https://github.com/iamuzi/WorkoutApp) . Leveraging the existing codebase, Have worked diligently to address UI-related issues, fix bugs, and introduce new screens to elevate the overall user experience and also add State management With Bloc.
+This project is a collaborative effort aimed at enhancing the user interface (UI) of a pre-existing repository [Link](https://github.com/iamuzi/WorkoutApp) . Leveraging the existing codebase, Have worked diligently to address UI-related issues, fix bugs, and introduce new screens to elevate the overall user experience and also add State management With Bloc.
 
 ### Key Contributions:
 
