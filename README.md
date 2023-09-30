@@ -17,6 +17,8 @@ This project is a collaborative effort aimed at enhancing the user interface (UI
 
 - **Bloc State Management**: Introduced Bloc state management to streamline application state and improve code organization.
 
+- **Firebase Auth and Storage With Firestore**: Introduced the logic to be able to register and login users and also be able to store there profiles and also able to fetch preference questions from firestore .
+
 - **Collaboration with Existing Codebase**: Demonstrated proficiency in working with an existing codebase, showcasing the ability to seamlessly integrate new features and improvements.
 
 
